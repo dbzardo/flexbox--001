@@ -1,0 +1,110 @@
+/*O CSS le o código abaixo de cima para baixo portanto vai obedecendo a ordem*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+
+    align-items:center;
+
+    /*alinha vertical ao centro
+    
+
+    /Alinha verticalmente na base da linha/
+    align-items:baseline;
+
+    /Alinha verticalmente ao topo/
+    align-items: flex-start;
+
+    /Alinha verticalmente ao rodapé/
+    align-items: flex-end;
+
+    /Estica os itens para preencher o container/
+    align-items: stretch;
+   
+*/
+
+    /*Distribui horizontalmente ao final(direita) => */
+    /*justify-content: flex-end;*/
+
+    /*Distribui horizontalmente ao final(esquerda) <= */
+    /*justify-content:flex-start*/
+
+    /*Distribui horizontalmente um espaçamento entre os elementos*/
+    /*justify-content: space-between;*/
+
+    /*Distribui horizontalmente  um espaçamento ao redor dos elementos*/
+    /*justify-content: space-around;*/
+
+    /*Distribui horizontalmente  um espaçamento ao redor dos elementos*/
+    /*justify-content: space-evenly;*/
+    
+
+    flex-direction: column;
+    /*OBS: O colum reverte o justify-content e o align-items, justify-content passa a ser vertical, align-items passa a ser horizontal*/
+
+    
+    /*flex-direction:row;*/
+    /*flex-direction:row-reverse;*/
+    /*flex-direction: column-reverse;*/
+    /*flex-wrap:wrap;*/
+    /*flex-wrap:nowrap*/
+}
+
+#azul{
+    background-color: blue;
+    order: -1;
+    flex-grow: 1;
+    /*align-self:flex-start;*/
+}
+
+div{
+    width: 200px;
+    height:100px;
+    background-color: red;
+    margin: 5px;
+    display: block;
+    /*display: inline;*/
+}
+
+
+/*Daqui para cima, para celular mobile first*/
+
+/*Daqui para baixo, para celular maiores e tabletes mobile first*/
+@media (min-width: 460px){        
+
+    div{
+        background-color:blue;
+        width:80%;
+    }
+
+
+}
+
+@media (min-width: 768px){     
+ 
+    div{
+        background-color:green;
+        width:50%;
+        height: 400px;
+    }
+
+
+}
+
+/*usado para responsividade de monitores grande */
+
+@media (min-width: 1289px){   
+
+    div{
+        background-color:black;
+        width:20%;
+    }
+
+
+}
